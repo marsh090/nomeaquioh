@@ -1,1 +1,66 @@
+#include <stdio.h>
+
+float soma (float x, float y){
+    int result;
+    return result = x + y;
+}
+float subt (float x, float y){
+    float result;
+    return result = x - y;
+}
+float mult (float x, float y){
+    float result;
+    return result = x * y;
+}
+float divi (float x, float y){
+    float result;
+    return result = x / y;
+}
+
+int main()
+{
+    // opt = opção escolhida pelo ususario
+    char opt;
+    float a, b, c;
+    int sair = 0;
+    
+    // continua rodando enquanto o usuario não escolher a opção de sair (x)
+    while(!sair){
+        
+        system("clear");
+        printf("Operação: \n-Soma(+)\n-Subtração(-)\n-Multiplicação(*)\n-Divisão(/)\n");
+        scanf("%c", &opt);
+        
+        printf("Primeiro valor da conta: ");
+        scanf("%f", &a);
+        printf("Segundo valor da conta: ");
+        scanf("%f", &b);
+        
+            switch(opt){
+                case '+':
+                    c = soma(a, b);
+                    printf("%.2f\n", c);
+                    break;
+                case '-':
+                    c = subt(a, b);
+                    printf("%.2f\n", c);
+                    break;
+                case '*':
+                    c = mult(a, b);
+                    printf("%.2f\n", c);
+                    break;
+                case '/':
+                    c = divi(a, b);
+                    printf("%.2f\n", c);
+                    break;
+                default:
+                    printf("Saindo...");
+                    break;
+            }
+        }
+        
+    }
+
+    return 0;
+}
 
